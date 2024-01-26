@@ -12,7 +12,7 @@ const FilterComp = (props: Props) => {
   return (
     <div className="w-full flex justify-center items-center font-bold text-[2rem] text-center text-white p-8 relative overflow-hidden">
       <div className="flex flex-col justify-center items-center gap-[.7rem] z-10">
-        <h1>Top Five Players By Total Stats</h1>
+        <h1 className="w-[50%] md:w-full">Top Five Players By Total Stats</h1>
         <FilterSelector setSortType={setSortType} sortType={sortType} />
       </div>
       <Image

@@ -31,7 +31,7 @@ const CardCarousel = (props: Props) => {
             return (
               <CarouselItem
                 key={player.id}
-                className="flex justify-center items-center w-full h-full basis-[70%] lg:basis-[45%]"
+                className="flex justify-center items-center w-full h-full basis-[20%] md:basis-[72%] lg:basis-[45%]"
               >
                 <PlayerCard player={player} index={index} />
               </CarouselItem>
