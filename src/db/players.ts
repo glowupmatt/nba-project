@@ -7,7 +7,7 @@ const URL = process.env.DEVELOPMENT_URL || "http://localhost:3000";
 
 export const createPlayers = async () => {
   try {
-    axios.post(`${URL}/players-actions`);
+    axios.post(`https://nba-project-iota.vercel.app/api/players-actions`);
   } catch (error) {
     console.log(error, "ERROR IN CREATE PLAYERS, ROUTER");
   }
@@ -15,8 +15,10 @@ export const createPlayers = async () => {
 
 export const getAllPlayers = async () => {
   try {
-    const players = await axios.get(`${URL}/players-actions`);
-    return players.data;
+    const players = await axios.get(
+      "https://nba-project-iota.vercel.app/api/players-actions"
+    );
+    return players;
   } catch (error) {
     console.log(error, "ERROR IN GET ALL PLAYERS, ROUTER");
   }
@@ -24,7 +26,7 @@ export const getAllPlayers = async () => {
 
 export const deleteAllPlayers = async () => {
   try {
-    axios.delete(`${URL}/players-actions`);
+    axios.delete(`https://nba-project-iota.vercel.app/api/players-actions`);
   } catch (error) {
     console.log(error, "ERROR IN DELETE ALL PLAYERS, ROUTER");
   }

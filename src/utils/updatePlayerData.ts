@@ -14,8 +14,10 @@ export default async function createAllStats(variant: "game" | "total") {
     } else {
       jsonData = await getTotalStatsJson();
     }
+
     const response = await getAllPlayers();
     const players: PlayerStats[] = response ? response.data : [];
+    console.log(players, "RESPONSE");
     const filteredPlayersJson = jsonData.filter(
       (player) => player.playerName !== undefined && player.playerName !== "0"
     );
