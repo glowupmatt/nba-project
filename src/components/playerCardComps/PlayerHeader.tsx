@@ -1,5 +1,5 @@
 import React from "react";
-import { UpdatePlayerType } from "@/types/playersType";
+import { UpdatePlayerType } from "@/utils/types";
 import PlayerImg from "./PlayerImg";
 type Props = {
   player: UpdatePlayerType;

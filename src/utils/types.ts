@@ -36,25 +36,28 @@ export type UpdateData = {
 };
 
 export type TotalStatsData = {
-  playerName: string;
+  id?: string;
   team: string;
-  age: string;
-  totalGamesPlayed: string;
-  totalGamesStarted: string;
-  minutesPlayed: string;
-  fieldGoals: string;
-  fieldGoalAttempts: string;
-  fieldGoalPercentage: string;
-  threePointers: string;
-  twoPointers: string;
-  totalRebounds: string;
-  assists: string;
-  blocks: string;
-  turnovers: string;
-  points: string;
+  totalGamesPlayed?: string;
+  totalGamesStarted?: string;
+  minutesPlayed?: string;
+  fieldGoals?: string;
+  fieldGoalAttempts?: string;
+  fieldGoalPercentage?: string;
+  threePointers?: string;
+  twoPointers?: string;
+  totalRebounds?: string;
+  assists?: string;
+  blocks?: string;
+  turnovers?: string;
+  points?: string;
   freeThrows: string;
   freeThrowAttempts: string;
   steals: string;
+  playerId?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  [key: string]: string | undefined;
 };
 
 export type UpdatePlayerType = {

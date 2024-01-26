@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import { TotalStatsType } from "@/types/playersType";
+import { TotalStatsData } from "@/utils/types";
 import { formatName } from "@/lib/nameFormatting";
 
 type Props = {
-  totalStats: TotalStatsType[];
+  totalStats: TotalStatsData[];
 };
 
 const PlayerStats = (props: Props) => {

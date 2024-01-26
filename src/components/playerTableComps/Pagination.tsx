@@ -3,7 +3,7 @@
 import React, { useContext } from "react";
 import { Button } from "../ui/button";
 import { DataContext } from "@/AppContext";
-import { PlayerTypeAPI } from "@/types/playersType";
+import { PlayerTypeAPI } from "@/utils/types";
 
 type Props = {
   sortedData: PlayerTypeAPI[];

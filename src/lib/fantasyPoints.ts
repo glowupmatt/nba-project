@@ -1,4 +1,4 @@
-import { PlayerTypeAPI } from "@/types/playersType";
+import { PlayerTypeAPI } from "@/utils/types";
 
 export const offensiveFantasyPointsConversion = (data: PlayerTypeAPI[]) => {
   return data.map((player) => {

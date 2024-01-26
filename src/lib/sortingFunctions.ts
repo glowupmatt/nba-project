@@ -1,4 +1,4 @@
-import { UpdatePlayerType } from ".././types/playersType";
+import { UpdatePlayerType } from "@/utils/types";
 
 export const sortPlayersTotal = (
   players: UpdatePlayerType[],

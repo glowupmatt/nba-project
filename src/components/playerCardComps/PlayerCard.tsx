@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { UpdatePlayerType } from "@/types/playersType";
+import { UpdatePlayerType } from "@/utils/types";
 import PlayerHeader from "./PlayerHeader";
 import PlayerStats from "./PlayerStats";
 
@@ -11,12 +11,13 @@ type Props = {
 
 const PlayerCard = (props: Props) => {
   const { player, index } = props;
+  const { totalStats } = player;
   return (
     <div className="flex flex-col w-[16rem] items-center p-0 rounded-lg shadow-md relative">
       <div className="absolute z-[100] w-[14rem] h-[25rem] flex justify-center items-center flex-col">
         <PlayerHeader player={player} index={index} />
         <div className="w-full ">
-          {player.totalStats && <PlayerStats totalStats={player.totalStats} />}
+          {totalStats && <PlayerStats totalStats={totalStats} />}
         </div>
       </div>
       <div className="relative h-full">

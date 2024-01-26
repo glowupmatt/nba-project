@@ -1,7 +1,7 @@
 "use client";
 
 import { ColumnDef, createColumnHelper } from "@tanstack/react-table";
-import { UpdatePlayerType } from "@/types/playersType";
+import { UpdatePlayerType } from "@/utils/types";
 
 const columnKeys = [
   "playerName",

@@ -1,4 +1,4 @@
-import { PlayerTypeAPI } from "@/types/playersType";
+import { PlayerTypeAPI } from "@/utils/types";
 
 export function sortAndFilterData(
   data: PlayerTypeAPI[],
