@@ -22,7 +22,7 @@ type Props = {
 
 const TableDisplay = (props: Props) => {
   const { players } = props;
-  const { sortBy, paginationPage, searchTerm, variant, setVariant, loading } =
+  const { sortBy, paginationPage, searchTerm, variant, setVariant, isLoading } =
     useContext(DataContext);
 
   const offensiveFantasyPoints = offensiveFantasyPointsConversion(players);
@@ -51,7 +51,7 @@ const TableDisplay = (props: Props) => {
         <SearchInput />
         <Filters />
       </div>
-      {loading ? (
+      {isLoading ? (
         <div className="w-full justify-center items-center flex">
           <h1>LOADING PLAYERS</h1>
         </div>
