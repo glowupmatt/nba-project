@@ -12,9 +12,11 @@ type Props = {
 
 const CardCarousel = (props: Props) => {
   const { players, sortType } = props;
+
   const plugin = React.useRef(
     Autoplay({ delay: 3500, stopOnInteraction: true, loop: true })
   );
+
   return (
     <Carousel
       plugins={[plugin.current]}
@@ -31,7 +33,7 @@ const CardCarousel = (props: Props) => {
             return (
               <CarouselItem
                 key={player.id}
-                className="flex justify-center items-center w-full h-full basis-[20%] md:basis-[72%] lg:basis-[45%]"
+                className="flex items-center w-full h-full basis-[25%] md:basis-[72%] lg:basis-[65%]"
               >
                 <PlayerCard player={player} index={index} />
               </CarouselItem>

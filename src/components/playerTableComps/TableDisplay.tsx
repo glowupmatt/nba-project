@@ -22,7 +22,7 @@ type Props = {
 
 const TableDisplay = (props: Props) => {
   const { players } = props;
-  const { sortBy, paginationPage, searchTerm, variant, setVariant } =
+  const { sortBy, paginationPage, searchTerm, variant, setVariant, loading } =
     useContext(DataContext);
 
   const offensiveFantasyPoints = offensiveFantasyPointsConversion(players);
@@ -51,20 +51,27 @@ const TableDisplay = (props: Props) => {
         <SearchInput />
         <Filters />
       </div>
-      <div className="w-full flex justify-center items-center">
-        <Button
-          className="w-full bg-white/20 border rounded-[1rem] border-black p-2 max-w-[50%]"
-          onClick={handleVariant}
-        >
-          Show {variant[0].toUpperCase() + variant.slice(1)} Data
-        </Button>
-      </div>
-      <div className="overflow-hidden">
-        <OffensivePlayerTable columns={variantValue} data={sortedData} />
-      </div>
-      <Pagination sortedData={sortedData} />
+      {loading ? (
+        <div className="w-full justify-center items-center flex">
+          <h1>LOADING PLAYERS</h1>
+        </div>
+      ) : (
+        <div>
+          <div className="w-full flex justify-center items-center">
+            <Button
+              className="w-full bg-white/20 border rounded-[1rem] border-black p-2 max-w-[50%]"
+              onClick={handleVariant}
+            >
+              Show {variant[0].toUpperCase() + variant.slice(1)} Data
+            </Button>
+          </div>
+          <div className="overflow-hidden">
+            <OffensivePlayerTable columns={variantValue} data={sortedData} />
+          </div>
+          <Pagination sortedData={sortedData} />
+        </div>
+      )}
     </div>
   );
 };
-
 export default TableDisplay;

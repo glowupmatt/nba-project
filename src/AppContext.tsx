@@ -12,6 +12,8 @@ type AppContextType = {
   setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
   variant: VARIANT;
   setVariant: React.Dispatch<React.SetStateAction<VARIANT>>;
+  isLoading: boolean;
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export const DataContext = createContext({} as AppContextType);
@@ -25,6 +27,7 @@ const AppContextProvider = ({ children }: Props) => {
   const [paginationPage, setPaginationPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState("");
   const [variant, setVariant] = useState<VARIANT>("defense");
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <DataContext.Provider
       value={
@@ -37,6 +40,8 @@ const AppContextProvider = ({ children }: Props) => {
           setSearchTerm,
           variant,
           setVariant,
+          isLoading,
+          setIsLoading,
         } as AppContextType
       }
     >
