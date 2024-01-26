@@ -51,7 +51,7 @@ const TableDisplay = (props: Props) => {
         <SearchInput />
         <Filters />
       </div>
-      {isLoading ? (
+      {isLoading === false ? (
         <div className="w-full justify-center items-center flex">
           <h1>LOADING PLAYERS</h1>
         </div>
