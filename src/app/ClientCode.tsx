@@ -22,7 +22,7 @@ const ClientCode = (props: Props) => {
     }
   }, []);
   return (
-    <section className="flex justify-center items-center flex-col gap-[5rem]">
+    <section className="flex justify-center items-center flex-col gap-[5rem] w-full">
       <TopFivePlayersByTotal players={players} />
       <div className="max-w-[90%] w-screen border-black overflow-scroll rounded-[1rem] border-[.3rem] md:overflow-hidden">
         <TableDisplay players={players} />
