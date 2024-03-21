@@ -1,4 +1,3 @@
-import axios from "axios";
 import createAllStats from "@/utils/updatePlayerData";
 import { NextResponse } from "next/server";
 

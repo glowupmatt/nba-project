@@ -3,7 +3,6 @@ import React, { useState, useEffect, useContext } from "react";
 import TopFivePlayersByTotal from "@/components/TopFivePlayersByTotal";
 import TableDisplay from "@/components/playerTableComps/TableDisplay";
 import axios from "axios";
-import { DataContext } from "@/AppContext";
 
 type Props = {};
 
